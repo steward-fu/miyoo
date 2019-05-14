@@ -9,15 +9,15 @@ If you would like to re-build all of sources, please refer to wiki page but you 
 ## Launcher
 | Name | Picture |
 |------|---------|
-| GMenu2X | ![Alt text](imgs/gmenu2x.jpg) |
+| [GMenu2X](https://github.com/steward-fu/miyoo/releases/download/v20190508_3/gmenu2x.zip) | ![Alt text](imgs/gmenu2x.jpg) |
    
 ## Applications
 | Name | Picture | How to run and exit |
 | -----|---------|---------------------|
-| Bard | ![Alt text](imgs/bard.jpg) | Run:<br>&emsp;1. set params in GMenu2X: -text $1<br>&emsp;2. select text file<br> Exit: press SELECT |
-| Commander | ![Alt text](imgs/commander.jpg) | Exit: press TB |
-| GMU | ![Alt text](imgs/gmu.jpg) | Exit: press SELECT and then START |
-| WizWrite | ![Alt text](imgs/wizwrite.jpg) | Exit: press MENU |
+| [Bard](https://github.com/steward-fu/miyoo/releases/download/v20190508_3/bard.zip) | ![Alt text](imgs/bard.jpg) | Run:<br>&emsp;1. set params in GMenu2X: -text $1<br>&emsp;2. select text file<br> Exit: press SELECT |
+| [Commander](https://github.com/steward-fu/miyoo/releases/download/v20190508_3/commander.zip) | ![Alt text](imgs/commander.jpg) | Exit: press TB |
+| [GMU](https://github.com/steward-fu/miyoo/releases/download/v20190508_3/gmu.zip) | ![Alt text](imgs/gmu.jpg) | Exit: press SELECT and then START |
+| [WizWrite](https://github.com/steward-fu/miyoo/releases/download/v20190508_3/wizwrite.zip) | ![Alt text](imgs/wizwrite.jpg) | Exit: press MENU |
    
 ## Emulators
 | Name | Picture | How to run and exit |
