@@ -72,7 +72,7 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
   
 ### build rootfs
 -  download buildroot-2018.02.9 from https://buildroot.org
--  use config_buildroot-2018.02.9 and then make it
+-  use config_buildroot-2018.02.9(in devel.zip) and then make it
 -  toolchain location: /opt/miyoo
 -  rootfs location: output/images/rootfs.tar
   
