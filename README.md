@@ -52,23 +52,23 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
 -  partition 4: FAT32 (GMenu2X, config files and emulators)
   
 ### flash uboot:
--  boot from SPI Flash
-   -  short SPI Pin1 and Pin2
+-  boot from SPI flash
+   -  short SPI pin1 and pin2
    -  connect USB to PC
    -  found device: 
       -  usb 4-1.2.4.4: New USB device found, idVendor=1f3a, idProduct=efe8
-   -  release SPI Pin1 and Pin2
+   -  release SPI pin1 and pin2
    -  flash command: 
       -  $ sudo sunxi-fel -p spiflash-write 0 u-boot-sunxi-with-spl.bin
 -  boot from SDCard
    -  $ sudo dd if=u-boot-sunxi-with-spl.bin of=/dev/sdX bs=1024 seek=8
   
 ### flash kernel
--  copy boot.scr into Partition 1
--  copy zImage into Partition 1
--  copy suniv-f1c500s-miyoo.dtb into Partition 1
--  copy r61520fb.ko into kernel folder in Partition 2
--  copy daemon into kernel folder in Partition 2
+-  copy boot.scr into partition 1
+-  copy zImage into partition 1
+-  copy suniv-f1c500s-miyoo.dtb into partition 1
+-  copy r61520fb.ko into kernel folder in partition 2
+-  copy daemon into kernel folder in partition 2
   
 ### build rootfs
 -  download buildroot-2018.02.9 from https://buildroot.org
