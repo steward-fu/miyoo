@@ -51,7 +51,7 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
 -  partition 3: 256MB SWAP
 -  partition 4: FAT32 (GMenu2X, config files and emulators)
   
-### flash UBoot:
+### flash uboot:
 -  boot from SPI Flash
    -  Short SPI Pin1 and Pin2
    -  Connect USB to PC
