@@ -27,9 +27,9 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
    -  export PATH=$PATH:/opt/miyoo/bin
   
 ### build uboot
--  boot from SPI flash
+-  boot from spi flash
    -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- licheepi_nano_spiflash_defconfig && make ARCH=arm
--  boot from SDCard
+-  boot from sdcard
    -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- licheepi_nano_defconfig && make ARCH=arm
   
 ### build kernel (sdcard 4bits)
@@ -45,19 +45,19 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
 ### build boot.scr
 -  mkimage -C none -A arm -T script -d boot.cmd boot.scr
   
-### prepare SDCard (>= 4GB)
+### prepare sdcard (>= 4GB)
 -  partition 1: 256MB FAT32 (boot.scr, dtb and zImage)
 -  partition 2: 256MB EXT4 (rootfs)
 -  partition 3: 256MB SWAP
 -  partition 4: FAT32 (GMenu2X, config files and emulators)
   
 ### flash uboot:
--  boot from SPI flash
-   -  short SPI pin1 and pin2
+-  boot from spi flash
+   -  short spi pin1 and pin2
    -  connect USB to PC
    -  found device: 
       -  usb 4-1.2.4.4: New USB device found, idVendor=1f3a, idProduct=efe8
-   -  release SPI pin1 and pin2
+   -  release spi pin1 and pin2
    -  flash command: 
       -  $ sudo sunxi-fel -p spiflash-write 0 u-boot-sunxi-with-spl.bin
 -  boot from SDCard
