@@ -17,40 +17,41 @@ You might ask why do you need to port Linux OS into Miyoo/Bittboy handheld becau
 |Weight   |80g                                 |
   
 ## How to build Linux OS for Miyoo/Bittboy  
-### Prepare environment
+### prepare environment
 -  Debian 9 (x64)
+-  download all of sources in release page
   
-### Configure toolchain
+### configure toolchain
 -  extract toolchain.7z into /opt/miyoo
 -  export command
    -  export PATH=$PATH:/opt/miyoo/bin
   
-### Build uboot
--  boot from SPI Flash
+### build uboot
+-  boot from SPI flash
    -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- licheepi_nano_spiflash_defconfig && make ARCH=arm
 -  boot from SDCard
    -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- licheepi_nano_defconfig && make ARCH=arm
   
-### Build kernel (sdcard 4bits)
+### build kernel (sdcard 4bits)
 -  vim arch/arm/boot/dts/suniv-f1c500s-miyoo.dts +55
    -  bus-width = <4>;
 -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- miyoo_defconfig && make ARCH=arm zImage
   
-### Build kernel (sdcard 1bit)
+### build kernel (sdcard 1bit)
 -  vim arch/arm/boot/dts/suniv-f1c500s-miyoo.dts +55
    -  bus-width = <1>;
 -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- miyoo_defconfig && make ARCH=arm zImage
   
-### Build boot.scr
+### build boot.scr
 -  mkimage -C none -A arm -T script -d boot.cmd boot.scr
   
-### Prepare SDCard (>= 4GB)
+### prepare SDCard (>= 4GB)
 -  partition 1: 256MB FAT32 (boot.scr, dtb and zImage)
 -  partition 2: 256MB EXT4 (rootfs)
 -  partition 3: 256MB SWAP
 -  partition 4: FAT32 (GMenu2X, config files and emulators)
   
-### Flash UBoot:
+### flash UBoot:
 -  boot from SPI Flash
    -  Short SPI Pin1 and Pin2
    -  Connect USB to PC
@@ -62,20 +63,20 @@ You might ask why do you need to port Linux OS into Miyoo/Bittboy handheld becau
 -  boot from SDCard
    -  $ sudo dd if=u-boot-sunxi-with-spl.bin of=/dev/sdX bs=1024 seek=8
   
-### Flash kernel
+### flash kernel
 -  copy boot.scr into Partition 1
 -  copy zImage into Partition 1
 -  copy suniv-f1c500s-miyoo.dtb into Partition 1
 -  copy r61520fb.ko into kernel folder in Partition 2
 -  copy daemon into kernel folder in Partition 2
   
-### Build rootfs
+### build rootfs
 -  download buildroot-2018.02.9 from https://buildroot.org
 -  use config_buildroot-2018.02.9 and then make it
 -  toolchain location: /opt/miyoo
 -  rootfs location: output/images/rootfs.tar
   
-### Flash rootfs
+### flash rootfs
 -  extract rootfs.tar into Partition 2
 
 ### https://steward-fu.github.io/website/index.htm
