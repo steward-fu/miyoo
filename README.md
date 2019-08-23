@@ -53,12 +53,12 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
   
 ### flash uboot:
 -  boot from SPI Flash
-   -  Short SPI Pin1 and Pin2
-   -  Connect USB to PC
-   -  Found device: 
+   -  short SPI Pin1 and Pin2
+   -  connect USB to PC
+   -  found device: 
       -  usb 4-1.2.4.4: New USB device found, idVendor=1f3a, idProduct=efe8
-   -  Release SPI Pin1 and Pin2
-   -  Flash command: 
+   -  release SPI Pin1 and Pin2
+   -  flash command: 
       -  $ sudo sunxi-fel -p spiflash-write 0 u-boot-sunxi-with-spl.bin
 -  boot from SDCard
    -  $ sudo dd if=u-boot-sunxi-with-spl.bin of=/dev/sdX bs=1024 seek=8
