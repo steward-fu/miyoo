@@ -1,4 +1,4 @@
-# Miyoo
+# Miyoo(Bittboy)
 ![Alt text](imgs/main.jpg)
   
 ## Introduction
@@ -16,7 +16,7 @@ You might ask why do you need to port Linux OS into Miyoo/Bittboy handheld becau
 |Dimension|68mm x 100mm x 15mm                 |
 |Weight   |80g                                 |
   
-## How to build Linux OS for Miyoo/Bittboy  
+## How to build Linux OS for Miyoo(Bittboy)  
 ### prepare environment
 -  Debian 9 (x64)
 -  download all of sources in release page
