@@ -46,7 +46,7 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
 -  mkimage -C none -A arm -T script -d boot.cmd boot.scr
   
 ### prepare sdcard (>= 4GB)
--  partition 1: 256MB FAT32 (boot.scr, dtb and zImage)
+-  partition 1: 32MB FAT32 (boot.scr, dtb and zImage)
 -  partition 2: 256MB EXT4 (rootfs)
 -  partition 3: 256MB SWAP
 -  partition 4: FAT32 (GMenu2X, config files and emulators)
