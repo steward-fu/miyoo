@@ -35,12 +35,12 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
 ### build kernel (sdcard 4bits)
 -  vim arch/arm/boot/dts/suniv-f1c500s-miyoo.dts +55
    -  bus-width = <4>;
--  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- miyoo_defconfig && make ARCH=arm zImage
+-  ARCH=arm CROSS_COMPILE=arm-linux- make miyoo_defconfig && ARCH=arm CROSS_COMPILE=arm-linux- make zImage
   
 ### build kernel (sdcard 1bit)
 -  vim arch/arm/boot/dts/suniv-f1c500s-miyoo.dts +55
    -  bus-width = <1>;
--  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- miyoo_defconfig && make ARCH=arm zImage
+-  ARCH=arm CROSS_COMPILE=arm-linux- make miyoo_defconfig && ARCH=arm CROSS_COMPILE=arm-linux- make zImage
   
 ### build boot.scr
 -  mkimage -C none -A arm -T script -d boot.cmd boot.scr
