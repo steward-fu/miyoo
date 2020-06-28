@@ -28,9 +28,9 @@ You might ask why do you need to port Linux OS into Miyoo(Bittboy) handheld beca
   
 ### build uboot
 -  boot from spi flash
-   -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- licheepi_nano_spiflash_defconfig && make ARCH=arm
+   -  ARCH=arm CROSS_COMPILE=arm-linux- make licheepi_nano_spiflash_defconfig && ARCH=arm CROSS_COMPILE=arm-linux- make
 -  boot from sdcard
-   -  make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- licheepi_nano_defconfig && make ARCH=arm
+   -  ARCH=arm CROSS_COMPILE=arm-linux- make licheepi_nano_defconfig && ARCH=arm CROSS_COMPILE=arm-linux- make
   
 ### build kernel (sdcard 4bits)
 -  vim arch/arm/boot/dts/suniv-f1c500s-miyoo.dts +55
